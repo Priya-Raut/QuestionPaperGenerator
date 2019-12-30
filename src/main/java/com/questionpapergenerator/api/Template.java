@@ -21,9 +21,10 @@ public class Template {
 
     private int templateId;
     private final Map<String, Integer> difficultyMap;
-    private int marks;
+    private final int marks;
 
-    public Template(int easyLevel, int mediumLevel, int hardLevel) {
+    public Template(int marks, int easyLevel, int mediumLevel, int hardLevel) {
+        this.marks = marks;
         this.difficultyMap = new HashMap<>();
         this.difficultyMap.put(EASY_DIFFICULTY, easyLevel);
         this.difficultyMap.put(MEDIUM_DIFFICULTY, mediumLevel);
@@ -44,10 +45,6 @@ public class Template {
 
     public int getMarks() {
         return marks;
-    }
-
-    public void setMarks(int marks) {
-        this.marks = marks;
     }
 
     @Override
