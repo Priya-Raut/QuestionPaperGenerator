@@ -7,6 +7,8 @@ package com.questionpapergenerator.memory;
 
 import com.questionpapergenerator.api.QuestionPaper;
 import com.questionpapergenerator.api.QuestionPaperService;
+import com.questionpapergenerator.core.AbstractService;
+import com.questionpapergenerator.core.Services;
 
 /**
  * An implementation of QuestionPaperService that stores all question papers in
@@ -14,7 +16,11 @@ import com.questionpapergenerator.api.QuestionPaperService;
  *
  * @author piya
  */
-public class MemoryQuestionPaperService implements QuestionPaperService {
+public class MemoryQuestionPaperService extends AbstractService implements QuestionPaperService {
+    
+    public MemoryQuestionPaperService(Services services){
+        super(services);
+    }
 
     @Override
     public void create(QuestionPaper questionPaper) {
