@@ -17,6 +17,13 @@ public class Question {
     private String subject;
     private String difficulty;
     private int marks;
+
+    public Question(String text, String subject, String difficulty, int marks) {
+        this.text = text;
+        this.subject = subject;
+        this.difficulty = difficulty;
+        this.marks = marks;
+    }
     
     public int getQuestionId() {
         return questionId;

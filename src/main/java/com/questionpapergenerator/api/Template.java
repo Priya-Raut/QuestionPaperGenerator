@@ -15,9 +15,9 @@ import java.util.Map;
  */
 public class Template {
 
-    private static final String EASY_DIFFICULTY = "Easy";
-    private static final String MEDIUM_DIFFICULTY = "Medium";
-    private static final String HARD_DIFFICULTY = "Hard";
+    public static final String EASY_DIFFICULTY = "Easy";
+    public static final String MEDIUM_DIFFICULTY = "Medium";
+    public static final String HARD_DIFFICULTY = "Hard";
 
     private int templateId;
     private final Map<String, Integer> difficultyMap;
