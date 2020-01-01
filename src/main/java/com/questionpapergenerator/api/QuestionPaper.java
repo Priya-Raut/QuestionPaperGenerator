@@ -19,6 +19,11 @@ public class QuestionPaper {
     private Collection<Question> questions;
     private Template template;
 
+    public QuestionPaper(Template template, Collection<Question> questions) {
+        this.questions = questions;
+        this.template = template;
+    }
+
     public int getQuestionPaperId() {
         return questionPaperId;
     }
