@@ -11,6 +11,9 @@ package com.questionpapergenerator.api;
  * @author piya
  */
 public class Question {
+    public static final String ENGLISH = "English";
+    public static final String MATHS = "Maths";
+    public static final String HISTORY = "History";
 
     private int questionId;
     private String text;
