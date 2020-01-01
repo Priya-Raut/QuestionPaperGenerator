@@ -27,7 +27,7 @@ public class MemoryTemplateService extends AbstractService implements TemplateSe
     public MemoryTemplateService(Services services) {
         super(services);
     }
-    
+
     @Override
     public void create(Template template) {
         if (templates.containsKey(template.getTemplateId())) {

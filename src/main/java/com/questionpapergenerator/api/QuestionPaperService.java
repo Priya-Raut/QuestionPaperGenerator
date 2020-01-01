@@ -9,25 +9,25 @@ import java.util.Collection;
 
 /**
  * A service which keeps track of which question paper exists.
- * 
+ *
  * @author piya
  */
 public interface QuestionPaperService {
-    
+
     /**
      * Create given question paper.
-     * 
-     * @param questionPaper 
+     *
+     * @param paper
      */
-    void create(QuestionPaper questionPaper);
-    
+    void create(QuestionPaper paper);
+
     /**
      * Delete given question paper.
-     * 
-     * @param questionPaper 
+     *
+     * @param paper
      */
-    void delete(QuestionPaper questionPaper);
-    
+    void delete(QuestionPaper paper);
+
 //TO DO: To be added..
 //    Collection<Question> getAllQuestions(QuestionPaper questionPaper);
 //    
@@ -36,5 +36,4 @@ public interface QuestionPaperService {
 //    Collection<Question> getQuestionsByDifficulty();
 //    
 //    Collection<Question> getQuestionsByMarks();
-    
 }
