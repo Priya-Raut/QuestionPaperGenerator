@@ -21,10 +21,13 @@ public class Template {
 
     private int templateId;
     private final Map<String, Integer> difficultyMap;
-    private final int marks;
+    private final int totalMarks;
 
-    public Template(int marks, int easyLevel, int mediumLevel, int hardLevel) {
-        this.marks = marks;
+    public Template(int totalMarks, int easyLevel, int mediumLevel, int hardLevel) {
+        if(easyLevel + mediumLevel + hardLevel != 100){
+            throw new IllegalArgumentException("Sum of difficulty level percent should be 100.");
+        }
+        this.totalMarks = totalMarks;
         this.difficultyMap = new HashMap<>();
         this.difficultyMap.put(EASY_DIFFICULTY, easyLevel);
         this.difficultyMap.put(MEDIUM_DIFFICULTY, mediumLevel);
@@ -44,11 +47,11 @@ public class Template {
     }
 
     public int getMarks() {
-        return marks;
+        return totalMarks;
     }
 
     @Override
     public String toString() {
-        return "Template{" + "templateId=" + templateId + ", difficultyMap=" + difficultyMap + ", marks=" + marks + '}';
+        return "Template{" + "templateId=" + templateId + ", difficultyMap=" + difficultyMap + ", totalMarks=" + totalMarks + '}';
     }
 }
