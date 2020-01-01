@@ -27,6 +27,10 @@ public class MemoryQuestionService extends AbstractService implements QuestionSe
     public MemoryQuestionService(Services services) {
         super(services);
     }
+    
+    public static int getNumberOfQuestions(int marksOfAQueston, int totalMarks) {
+        return totalMarks / marksOfAQueston;
+    }
 
     @Override
     public void create(Question question) {
