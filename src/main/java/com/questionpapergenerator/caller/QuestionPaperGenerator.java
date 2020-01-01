@@ -7,7 +7,6 @@ package com.questionpapergenerator.caller;
 
 import com.questionpapergenerator.api.Question;
 import com.questionpapergenerator.api.QuestionPaper;
-import com.questionpapergenerator.api.QuestionPaperService;
 import com.questionpapergenerator.api.Template;
 import com.questionpapergenerator.core.ServiceFactory;
 import com.questionpapergenerator.core.Services;
@@ -15,7 +14,7 @@ import com.questionpapergenerator.memory.MemoryQuestionPaperService;
 import com.questionpapergenerator.memory.MemoryQuestionService;
 import com.questionpapergenerator.memory.MemoryTemplateService;
 import java.util.Collection;
-import java.util.HashSet;
+import java.util.LinkedHashSet;
 import java.util.Scanner;
 import java.util.Set;
 
@@ -31,7 +30,7 @@ public class QuestionPaperGenerator {
     MemoryQuestionService questionService = services.getMemoryQuestionService();
     MemoryQuestionPaperService questionPaperService = services.getMemoryQuestionPaperService();
     MemoryTemplateService templateService = services.getMemoryTemplateService();
-    Set<Question> questions = new HashSet<>();
+    Set<Question> questions = new LinkedHashSet<>();
 
     public Template createTemplate() {
         System.out.println("Enter total marks: ");
